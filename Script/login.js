@@ -12,6 +12,7 @@ $(function () {
             contentType: 'application/json',
             success: function (data) {
                 console.log(data);
+                localStorage.setItem('token',data.result.accessToken)
                 alert("sigin successfull.");
             },
             error: function (error) {

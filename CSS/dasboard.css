@@ -1,21 +1,215 @@
-.head{
-    margin: 0px;
-    height: 70px;
-    width: 1282px;
+.head {
+    margin: -10px;
+    height: 60px;
+    width: 1265px;
     background-color: #A03037;
 }
-.main{
+
+.main {
     display: flex;
     flex-direction: row;
 }
-.bookimg{
+
+.bookimg {
+    margin: -8px;
+    height: 70px;
+    width: 300px;
+    display: flex;
+    border: 0px solid white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.innerbook {
+    height: 50px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textbookstore {
+    color: white;
+    font: normal normal normal 20px/26px Roboto;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.search {
+    margin: -5px;
+    height: 70px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    height: 25px;
+    width: 500px;
+}
+
+.icons {
+    margin: -9px;
+    height: 70px;
+    width: 280px;
+    border: 0px solid black;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
 }
-.textbookstore{
-color: white;
-font: normal normal normal 20px/26px Roboto;
-color: #FFFFFF;
-text-transform: capitalize;
-opacity: 1;
+
+.icons-header {
+    height: 70px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* content */
+.content {
+    margin: 8px;
+    margin-left: -10px;
+    height: 900px;
+    width: 1264px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    border: 1px solid black;
+}
+
+.innercontent {
+    height: 900px;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: row wrap;
+    border: 0px solid black;
+}
+
+.bookdiv {
+    width: 200px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+}
+
+.bookdiv:hover {
+    box-shadow: 2px 2px 2px 2px gainsboro;
+}
+
+.book-image {
+    background-color:#F5F5F5;
+    height: 180px;
+    width: 200px;
+    border: 0px solid gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descr {
+    height: 150px;
+    width: 200px;
+    border: 0px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.authorname {
+    height: 40px;
+    width: 160px;
+    border: 0px solid red;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: flex-start; */
+}
+
+.bookname-text {
+    font-size: large;
+    font-weight: 600;
+}
+
+.author-text {
+    width: 160px;
+    height: 10px;
+    color: #878787;
+}
+
+.rating-container {
+    width: 35px;
+    height: 30px;
+    display: flex;
+    width: 160px;
+    border: 0px solid red;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.rating {
+    width: 35px;
+    height: 17px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #388E3C;
+    border-radius: 1px;
+    padding: 2px;
+    color: white;
+}
+
+.no-of-people-rated {
+    /* margin-top: 3px;
+    margin-left: 10px; */
+    color: gray;
+}
+
+.price-container {
+    height: 40px;
+    width: 160px;
+    border: 0px solid red;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.priceText {
+    height: 40px;
+    width: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dicounted-price {
+    /* margin-top: 10px; */
+    font-size: large;
+    font-weight: 500;
+}
+
+.actual-price {
+    /* margin-top: 10px;
+    margin-left: 5px; */
+    text-decoration: line-through;
+    color: gray;
 }
