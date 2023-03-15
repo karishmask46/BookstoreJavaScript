@@ -1,0 +1,21 @@
+.head{
+    margin: 0px;
+    height: 70px;
+    width: 1282px;
+    background-color: #A03037;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.bookimg{
+    display: flex;
+    flex-direction: row;
+}
+.textbookstore{
+color: white;
+font: normal normal normal 20px/26px Roboto;
+color: #FFFFFF;
+text-transform: capitalize;
+opacity: 1;
+}
