@@ -144,7 +144,7 @@
 
 .bookname-text {
     font-size: large;
-    font-weight: 600;
+    font-family:Roboto ;
 }
 
 .author-text {
@@ -184,7 +184,7 @@
 }
 
 .price-container {
-    height: 40px;
+    height: 25px;
     width: 160px;
     border: 0px solid red;
     display: flex;
@@ -204,7 +204,7 @@
 .dicounted-price {
     /* margin-top: 10px; */
     font-size: large;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .actual-price {
@@ -212,4 +212,31 @@
     margin-left: 5px; */
     text-decoration: line-through;
     color: gray;
+}
+.cart-wish{
+    height: 40px;
+    width: 180px;
+    border: 0px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.Add-Bag{
+    height: 30px;
+    width: 88px;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+}
+.Wish-list{
+    height: 30px;
+    width: 88px;
+    background-color:black;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
 }
