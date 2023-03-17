@@ -82,9 +82,17 @@
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    border: 1px solid black;
+    border: 0px solid black;
 }
-
+.home-Book{
+    margin: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 341px;
+    border: 0px solid red;
+}
 .innercontent {
     height: 900px;
     width: 1000px;
@@ -231,6 +239,7 @@
     border-radius: 3px;
     font-size: 12px;
 }
+
 .Wish-list{
     height: 30px;
     width: 88px;
@@ -239,4 +248,8 @@
     border: none;
     border-radius: 3px;
     font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

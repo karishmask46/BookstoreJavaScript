@@ -27,18 +27,14 @@ $(function () {
                     <div>
                         <button class="bag">ADD TO BAG</button>
                     </div>
-                    <div class="quantity">
-                        <button class="subtract">-</button>
-                        <span class="numder"></span>
-                        <button class="add">+</button>
-                    </div>
-                    <button class="wish">WISHLIST</button>
+                    <button class="wish"><img src="/Assets/icons8-heart-24.png" alt="">
+                    WISHLIST</button>
                 </div>
             </div>
             <div class="rightpart">
                 <div class="midpart">
                     <div class="title">
-                        <h1>`+item.bookName +`</h1>
+                        <p>`+item.bookName +`</p>
                     </div>
                     <div class="author">
                         <p> by  `+ item.author + `</p>
@@ -107,3 +103,6 @@ $(function () {
         }
     });
 });
+function dashboard(){
+    window.location.href="/Templates/Dasboard/dashboard.html"
+}

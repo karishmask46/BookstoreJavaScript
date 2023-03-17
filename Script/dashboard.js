@@ -45,7 +45,7 @@ $(function () {
                 <button class="Add-Bag" id="${item._id}" onclick="cart(this)">ADD TO BAG</button>
             </div>
             <div class="wish">
-                <button class="Wish-list" id="${item._id}" onclick="wishlist(this)">WISHLIST</button>
+                <button class="Wish-list" id="${item._id}" onclick="wishlist(this)"> <img src="/Assets/icons8-heart-24.png" alt="">WISHLIST</button>
             </div>
         </div>
             </div>
@@ -103,4 +103,7 @@ function wishlist(element){
             console.error(error);
         }
     })
+}
+function cart(){
+    window.location.href="/Templates/Dasboard/cart.html"
 }

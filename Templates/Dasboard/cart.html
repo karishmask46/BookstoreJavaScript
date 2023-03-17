@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/Script/Cart.js"></script>
+    <link rel="stylesheet" href="/CSS/Cart.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="head">
+        <div class="main">
+            <div class="bookimg">
+                <div class="innerbook">
+                    <img src="/Assets/education.svg" alt="" width="31px" height="24px">
+                    <p class="textbookstore">Bookstore</p>
+                </div>
+            </div>
+            <div class="search">
+                <input class="search-input" type="text" placeholder="search">
+            </div>
+            <div class="icons">
+                <div class="icons-header">
+                    <img src="/Assets/icons8-user-24.png" alt="" height="25px" width="25px">
+                    <img src="/Assets/supermarket (1).svg" alt="" height="20px" width="20px">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="maincont">
+        <div onclick="dashboard()" class="mainpage">
+            <button class="home">Home /</button>
+        </div>
+        <div class="bookbutton">
+            <button class="book">My cart</button>
+        </div>
+    </div>
+    <div class="cart_container">
+        <div class="quantityArray">
+
+        </div>
+        <div class="book-cartlist">
+
+        </div>
+
+        <div class="order-button">
+            <button class="place">PLACE ORDER</button>
+        </div>
+    </div>
+    <form id="customerDetails">
+        <div class="address" >
+            <div class="login">
+                <div class="first">
+                    <span style="font-size:x-large;" >Address Details</span>
+                </div>
+                <div class="Abcd" style="display: none;">
+                    <div class="Efgh">
+                        <span style="font-size:18px;">Customer Details</span>
+                        <span class="new">New Address</span>
+                    </div>
+                    <div class="ijkl">
+                        <div class="second">
+                            <div class="email">
+                                <span>Full name</span>
+                            </div>
+                            <input class="field1" id="full_adress" type="text">
+                        </div>
+                        <div class="second">
+                            <span class="password">mobile number</span>
+                            <input class="field1" id="Mobile_number" type="text">
+                        </div>
+                    </div>
+                    <div class="third">
+                        <span class="password"> Address </span>
+                        <input class="field1" type="text">
+                    </div>
+                    <div class="mnop">
+                        <div class="fourth">
+                            <span class="password"> state </span>
+                            <input class="field1" id="State-Input" type="text">
+                        </div>
+                        <div class="fourth">
+                            <span class="password"> city/town </span>
+                            <input class="field1" id="Town-Input" type="text">
+                        </div>
+                    </div>
+                    <div class="type">
+                        <span>Type</span>
+                        <div class="boxes">
+                            <div><input type="radio"><label for="input">Home</label></div>
+                            <div><input type="radio"><label for="input">Work</label></div>
+                            <div><input type="radio"><label for="input">Others</label></div>
+                        </div>
+                    </div>
+                    <div class="qrl">
+                        <button class="continue-button" type="submit">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="summary">
+        <div class="head1">
+            <span style="font-size: x-large;">Order Summary</span>
+        </div>
+        <div class="work">
+            <div class="checkoutCartOrder">
+            </div>
+            <div class="xyz">
+                <a class="order">Checkout</a>
+            </div>
+
+        </div>
+</body>
+
+</html>
