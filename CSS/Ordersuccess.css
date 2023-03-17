@@ -1,0 +1,125 @@
+.head {
+    margin: -10px;
+    height: 60px;
+    width: 1265px;
+    background-color: #A03037;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.bookimg {
+    margin: -8px;
+    height: 70px;
+    width: 300px;
+    display: flex;
+    border: 0px solid white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.innerbook {
+    height: 50px;
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.textbookstore {
+    color: white;
+    font: normal normal normal 20px/26px Roboto;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.search {
+    margin: -5px;
+    height: 70px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    height: 25px;
+    width: 500px;
+}
+
+.icons {
+    margin: -9px;
+    height: 70px;
+    width: 280px;
+    border: 0px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.icons-header {
+    height: 70px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+/* content */
+table{
+    border: 1px solid black;
+    margin-bottom: 100px;
+    position: relative;
+    right: 100px;
+}
+th,
+td {
+    height: 30px;
+   width: 40px;
+    border: 1px solid black;
+   
+}
+.continuebutton {
+    background-color:#3371B5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-left: 50px;
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.hurray{
+    margin-left: 350px;
+    margin-top: 20px;
+}
+.test{
+    margin-left: 20px;
+width: 400px;
+border:0px solid red;
+}
+.table{
+    width: 700px;
+    height: 120px;
+    display: flex;
+   border: 0px solid red;
+}
+.tlb{
+    width: 800px;
+    height: 200px;
+    border: 0px solid red;
+}
+.cont{
+margin-left: 100px;
+
+}

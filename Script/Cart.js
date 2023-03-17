@@ -130,3 +130,6 @@ $(function(){
           });
     })
 })
+function orderPage(){
+    window.location.href="/Templates/Dasboard/Orderscucess.html";
+}

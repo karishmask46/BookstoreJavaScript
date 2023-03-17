@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="/Script/Quickview.js"></script>
-    <link rel="stylesheet" href="/CSS/QuickView.css">
+    <script src="/Script/wishlist.js"></script>
+    <link rel="stylesheet" href="/CSS/wishlist.css">
     <title>Document</title>
 </head>
 
@@ -26,24 +26,26 @@
             <div class="icons">
                 <div class="icons-header">
                     <img src="/Assets/icons8-user-24.png" alt="" height="25px" width="25px">
-                    <img src="/Assets/icons8-shopping-cart-24.png" alt="" onclick="cartPage()" height="25px" width="25px">
+                    <img src="/Assets/supermarket (1).svg" alt="" onclick="cart()" height="20px" width="20px">
                 </div>
             </div>
         </div>
     </div>
-    <div class="home-Book">
-        <span onclick="dashboard()" style="color:#9D9D9D;">Home /</span>
-        <span>Book</span>
-    </div>
-    <div class="content">
-       
-        <div class="innercontent">
-            <div class="imagepart">
-                
+    <div class="Container">
+        <div class="mainblock">
+            <div class="header">
+                <p type="button" style="color: #9D9D9D">Home / </p>
+                <p>My Wishlist</p>
+            </div>
+        </div>
+        <div class="cart_container">
+            <div class="quantityArray">
+            </div>
+            <div class="book-cartlist">
             </div>
         </div>
     </div>
-    
+    </div>
 </body>
 
 </html>

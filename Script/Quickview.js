@@ -25,9 +25,9 @@ $(function () {
                 </div>
                 <div class="buttonimg">
                     <div>
-                        <button class="bag">ADD TO BAG</button>
+                        <button class="bag" id="${item._id}" onclick="cart(this)">ADD TO BAG</button>
                     </div>
-                    <button class="wish"><img src="/Assets/icons8-heart-24.png" alt="">
+                    <button class="wish" id="${item._id}" onclick="wishlist(this)"><img src="/Assets/icons8-heart-24.png" alt="">
                     WISHLIST</button>
                 </div>
             </div>
@@ -105,4 +105,49 @@ $(function () {
 });
 function dashboard(){
     window.location.href="/Templates/Dasboard/dashboard.html"
+}
+function cartPage(){
+    window.location.href="/Templates/Dasboard/cart.html"
+}
+function cart(cartId){
+    var element=$(cartId).attr('id')
+    console.log(element);
+    let obj={
+        bookid: element,
+      }
+      console.log(obj);
+    $.ajax({
+        type: "POST",
+        url: `https://bookstore.incubation.bridgelabz.com/bookstore_user/add_cart_item/${element}`,
+        data: JSON.stringify(obj),
+        contentType: 'application/json',
+        headers: { 'x-access-token': localStorage.getItem('token') },
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    })
+}
+function wishlist(element){
+    var wishID=$(element).attr('id')
+    console.log(wishID);
+    let obj={
+        bookid: wishID,
+      }
+      console.log(obj);
+    $.ajax({
+        type: "POST",
+        url: `https://bookstore.incubation.bridgelabz.com/bookstore_user/add_wish_list/${wishID}`,
+        data: JSON.stringify(obj),
+        contentType: 'application/json',
+        headers: { 'x-access-token': localStorage.getItem('token') },
+        success: function (result) {
+            console.log(result);
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    })
 }
