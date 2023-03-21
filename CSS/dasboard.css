@@ -76,7 +76,7 @@
 .content {
     margin: 8px;
     margin-left: -10px;
-    height: 900px;
+    height: auto;
     width: 1264px;
     display: flex;
     justify-content: center;
@@ -87,15 +87,21 @@
 .home-Book{
     margin: 11px;
     display: flex;
+    margin-left: 60px;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
     height: 45px;
     width: 341px;
     border: 0px solid red;
 }
+#itemslength{
+    font: 30px;
+   color: gray;
+}
 .innercontent {
-    height: 900px;
-    width: 1000px;
+    height: 980px;
+    width: 950px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -106,7 +112,7 @@
 
 .bookdiv {
     width: 200px;
-    height: 275px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,4 +258,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.Bookheading{
+    font-size: 20px;
+    font-weight: 600;
 }

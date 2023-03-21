@@ -534,6 +534,7 @@
     height: 100%;
     width: 100%;
     display: flex;
+    margin-top: 50px;
     flex-direction: column;
     border: 0px solid red;
 }

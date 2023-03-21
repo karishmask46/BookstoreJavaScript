@@ -20,7 +20,7 @@ $(function () {
              </div>
              <div class="book-description">
               <div class="desc-Text">
-                 <span class="cart-Desc">`+ item.product_id.bookName +`</span>
+                 <span class="cart-Desc">`+ item.product_id.bookName + `</span>
                  <span class="cart-author">by `+ item.product_id.author + `</span>
                  </div>
                  <div class="price-container">
@@ -32,11 +32,11 @@ $(function () {
                      </div>
                  </div>
                  <div class="quantity">
-                     <button class="subtract">-</button>
-                     <span class="numder"></span>
-                     <button class="add">+</button>
+                     <button class="subtract"  onclick="decreasebook('${encodeURIComponent(JSON.stringify(item))}')">-</button>
+                     <span class="numder">`+item.quantityToBuy+`</span>
+                     <button class="add"  onclick="increasebook('${encodeURIComponent(JSON.stringify(item))}')">+</button>
                      <div class="btn">
-                         <button id="${item.product_id._id }" onclick="removeCart(this)" class="Remove-Button">
+                         <button id="${item._id}" onclick="removeCart(this)" class="Remove-Button">
                              Remove
                          </button>
                      </div>
@@ -66,10 +66,13 @@ $(function () {
       </div>
   </div>
   </div>`)
+  $(".xyz").append(` <a class="order"  onclick="checkout('${encodeURIComponent(JSON.stringify(item))}')">Checkout</a>`)
             })
+            console.log(bookArray);
             $(".quantityArray").append(`<h3 class="heading">My cart
   (`+ bookArray.length + `)
 </h3>`)
+
         },
         error: function (error) {
             console.error(error);
@@ -77,21 +80,22 @@ $(function () {
     });
 });
 
-$(function(){
-    $(".place").on("click",function(){
+$(function () {
+    $(".place").on("click", function () {
         console.log("clicked");
-        $(".Abcd").css( 'display' , 'block')
+        $(".Abcd").css('display', 'block')
         $(".first").hide();
     })
-   
+
 })
-$(function(){
-    $(".continue-button").on("click",function(){
-        $(".work").css('display' , 'block')
+$(function () {
+    $(".continue-button").on("click", function () {
+        console.log("clicked");
+        $(".work").css('display', 'block')
     })
 })
-function removeCart(element){
-    var deleteId=$(element).attr('id')
+function removeCart(element) {
+    var deleteId = $(element).attr('id')
     console.log(deleteId);
     $.ajax({
         type: "DELETE",
@@ -99,19 +103,20 @@ function removeCart(element){
         contentType: 'application/json',
         headers: { "x-access-token": localStorage.getItem('token') },
         success: function (data) {
-          console.log(data);
+            console.log(data);
         },
         error: function (error) {
-          console.error(error);
+            console.error(error);
         }
-      });
+    });
 }
-$(function(){
-    $("#customerDetails").on("submit",function(){
-        addressType=['Home','work','others']
-        let details={
+$(function () {
+    $("#customerDetails").on("submit", function (event) {
+        event.preventDefault();
+        addressType = ['Home', 'work', 'others']
+        let details = {
             addressType: addressType,
-            fullAddress:$("#full_adress").val(),
+            fullAddress: $("#full_adress").val(),
             city: $("#Town-Input").val(),
             state: $("#State-Input").val(),
         }
@@ -119,17 +124,94 @@ $(function(){
             type: "PUT",
             url: "https://bookstore.incubation.bridgelabz.com/bookstore_user/edit_user",
             contentType: 'application/json',
-            data:JSON.stringify(details),
+            data: JSON.stringify(details),
             headers: { "x-access-token": localStorage.getItem('token') },
             success: function (data) {
-              console.log(data);
+                console.log(data);
+
             },
             error: function (error) {
-              console.error(error);
+                console.error(error);
             }
-          });
+        });
+
     })
 })
-function orderPage(){
-    window.location.href="/Templates/Dasboard/Orderscucess.html";
+function checkout(element) {
+    element = JSON.parse(decodeURIComponent(element))
+    console.log(element);
+    let orders = []
+      let Book = {
+        product_id: element.product_id._id,
+        product_name: element.product_id.bookName,
+        product_quantity: element.product_id.quantity,
+        product_price: element.product_id.price,
+      }
+      orders.push(Book)
+    
+    let payload = {
+      orders: orders
+    }
+    $.ajax({
+        type: "POST",
+        url: "https://bookstore.incubation.bridgelabz.com/bookstore_user/add/order",
+        contentType: 'application/json',
+        data: JSON.stringify(payload),
+        headers: { "x-access-token": localStorage.getItem('token') },
+        success: function (data) {
+            console.log(data);
+
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    });
+
+}
+var item_qty;
+var qunt = [];
+function increasebook(Book) {
+    Book = JSON.parse(decodeURIComponent(Book))
+    item_qty = Book.quantityToBuy;
+    console.log(item_qty);
+    if (item_qty > 0) {
+        item_qty += 1;
+        console.log("increase", item_qty);
+        quantityTobuy(Book,item_qty);
+    }
+}
+function decreasebook(Book) {
+    Book = JSON.parse(decodeURIComponent(Book))
+    item_qty = Book.quantityToBuy;
+    console.log(item_qty);
+    if (item_qty > 0) {
+        item_qty -= 1;
+        console.log("decrease", item_qty);
+        quantityTobuy(Book,item_qty);
+    }
+
+}
+function quantityTobuy(quantity,item) {
+    console.log(quantity);
+    console.log(item);
+    let details = {
+        quantityToBuy:item
+    }
+    $.ajax({
+        type: "PUT",
+        url: `https://bookstore.incubation.bridgelabz.com/bookstore_user/cart_item_quantity/${quantity._id}`,
+        contentType: 'application/json',
+        data: JSON.stringify(details),
+        headers: { "x-access-token": localStorage.getItem('token') },
+        success: function (data) {
+            console.log(data);
+
+        },
+        error: function (error) {
+            console.error(error);
+        }
+    });
+}
+function orderPage() {
+    window.location.href = "/Templates/Dasboard/Orderscucess.html";
 }
