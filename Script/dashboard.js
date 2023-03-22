@@ -3,6 +3,3 @@ function quickview(element) {
     localStorage.setItem('quickView', bookId)
     window.location.href = "/Templates/Dasboard/QuickView.html"
 }
-
-
-

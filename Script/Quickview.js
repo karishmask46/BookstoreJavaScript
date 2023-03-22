@@ -59,7 +59,7 @@ $(function () {
                     </div>
                     <hr>
                     <div>
-                        <ul>
+                        <ul class="descriptionPart">
                             <li>
                                 Book Description
                             </li>

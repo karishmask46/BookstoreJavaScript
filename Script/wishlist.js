@@ -12,6 +12,7 @@ $(function () {
             bookArray.forEach(function (item) {
                 $(".book-cartlist").append(` 
          <div class="crt">
+         <div class="bookPart">
              <div class="image">
                  <img class="cart-Image" src="/Assets/Image 12@2x.png" alt="" height="100px" width="80px">
              </div>
@@ -29,6 +30,7 @@ $(function () {
                      </div>
                  </div>
              </div>
+             </div>
              <div class="delete" >
                 <img class="deletebutton" src="/Assets/delete_FILL0_wght400_GRAD0_opsz48.svg" alt="" height="30px" width=""30px>
             </div>
@@ -42,3 +44,11 @@ $(function () {
         }
     });
 });
+function dashboard() {
+    window.location.href = "/Templates/Dasboard/dashboard.html"
+}
+function cart() {
+    window.location.href = "/Templates/Dasboard/cart.html"
+  }
+
+
