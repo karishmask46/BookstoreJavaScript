@@ -87,17 +87,21 @@
 .home-Book{
     margin: 11px;
     display: flex;
-    margin-left: 60px;
+    margin-left: 165px;
     margin-top: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 45px;
-    width: 341px;
+    width:910px;
     border: 0px solid red;
 }
 #itemslength{
     font: 30px;
    color: gray;
+}
+.sortrelevance{
+    display: flex;
+    flex-direction: column;
 }
 .innercontent {
     height: auto;
@@ -263,4 +267,12 @@
 .Bookheading{
     font-size: 20px;
     font-weight: 600;
+}
+.relevanceButton{
+background: none;
+border: none;
+}
+#input-field{
+    height: 30px;
+    width: 200px;
 }

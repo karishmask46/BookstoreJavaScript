@@ -27,3 +27,6 @@ $(function () {
 function signup(){
     window.location.href="/Templates/signup/signup.html"
 }
+function dashboard(){
+    window.location.href="/Templates/Dasboard/dashboard.html"
+}

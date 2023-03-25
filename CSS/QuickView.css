@@ -260,7 +260,7 @@
 .dicounted-price {
     margin-top: 10px;
     font-size: large;
-    font-weight: 500;
+    font-weight: 600;
     border: 0px solid red;
 }
 
@@ -316,10 +316,13 @@
     border: 1px solid gainsboro;
 }
 
-
+.feed{
+    background-color: #F5F5F5;
+}
 .rate {
     float: left;
     height: 46px;
+    border: 0px solid red;
 }
 
 .rate:not(:checked)>input {
@@ -358,11 +361,55 @@
     color: #c59b08;
 }
 
+.ratingGet {
+    float: right;
+    height: 60px;
+    margin-top: 10px;
+    border: 0px solid red;
+}
+
+.ratingGet:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.ratingGet:not(:checked)>label {
+    float: left;
+    width: 1em;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+    border: #707070;
+}
+
+.ratingGet:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.ratingGet>input:checked~label {
+    color: #ffc700;
+}
+
+.ratingGet:not(:checked)>label:hover,
+.ratingGet:not(:checked)>label:hover~label {
+    color: #deb217;
+}
+
+.ratingGet>input:checked+label:hover,
+.ratingGet>input:checked+label:hover~label,
+.ratingGet>input:checked~label:hover,
+.ratingGet>input:checked~label:hover~label,
+.ratingGet>label:hover~input:checked~label {
+    color: #c59b08;
+}
+
 .searchInput {
     margin-top: 5px;
     margin-right: 30%;
-    width: 400px;
-    height: 41px;
+    width: 498px;
+    height: 80px;
     font: normal normal normal 15px/20px Roboto;
     letter-spacing: 0px;
     background-color: white;
@@ -374,10 +421,36 @@
     width: 70px;
     height: 30px;
     margin-top: 20px;
-    margin-left: 500px;
+    margin-left: 430px;
     border-radius: 5px;
     background-color: #3371B5;
     color: #F5F5F5;
     opacity: 1;
     border: none;
+}
+.postfeedBack{
+    background-color: white;
+   padding: 20px;
+}
+.listofFeedback{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-right: 30%;
+    width: 570px;
+    height: 100px;
+    font: normal normal normal 15px/20px Roboto;
+    letter-spacing: 0px;
+    background-color:white;
+    border: 0px solid gainsboro;
+    opacity: 1;
+    outline: none;
+}
+.comment{
+    color: #707070;
+}
+.userId{
+    height: 20px;
+    border: 0px solid red;
+    font-weight: 600;
 }

@@ -10,7 +10,7 @@
     <script src="/Services/userservice.js"></script>
     <link rel="stylesheet" href="/CSS/dasboard.css">
     <title>Document</title>
-    
+
 </head>
 
 <body>
@@ -27,19 +27,31 @@
             </div>
             <div class="icons">
                 <div class="icons-header">
-                    <img src="/Assets/icons8-user-24.png" alt="" height="25px" width="25px">
+                    <img src="/Assets/icons8-user-24.png" onclick="logout()" alt="" height="25px" width="25px">
                     <img src="/Assets/supermarket (1).svg" alt="" onclick="cart()" height="20px" width="20px">
                 </div>
             </div>
         </div>
     </div>
+
     <div class="home-Book">
+        <div class="booktotal"></div>
+        <div class="sortrelevance">
+            <form>
+                <select name="cars" id="input-field" onchange="myFunction()">
+                    <option value="audi">Sort by relevance</option>
+                    <option value="High to low">Price:High to low</option>
+                    <option value="low to High">Price:low to High</option>
+                    <option value="newest Arivals">newest Arivals</option>
+                </select>
+            </form>
+        </div>
     </div>
     <div class="content">
         <div class="innercontent">
         </div>
     </div>
-   
+
 </body>
 
 </html>
