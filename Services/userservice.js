@@ -1,6 +1,7 @@
+
 var bookArray, filterArray;
 console.log(localStorage.getItem('token'));
-
+cartItemList();
 $(function () {
   $.ajax({
     type: "GET",
@@ -146,7 +147,7 @@ function wishlist(element) {
 }
 
 // cart Api
-$(function () {
+function cartItemList(){
   $.ajax({
     type: "GET",
     url: "https://bookstore.incubation.bridgelabz.com/bookstore_user/get_cart_items",
@@ -169,7 +170,9 @@ $(function () {
       console.error(error);
     }
   });
-});
+}
+  
+
 function getCartItems(bookArray){
   console.log(bookArray);
   bookArray.forEach(function (item) {
@@ -239,6 +242,9 @@ function removeCart(element) {
     headers: { "x-access-token": localStorage.getItem('token') },
     success: function (data) {
       console.log(data);
+      cartItemList();
+      $(".quantityArray").empty();
+      $(".book-cartlist").empty();
     },
     error: function (error) {
       console.error(error);
@@ -309,10 +315,19 @@ function quantityTobuy(quantity, item) {
     headers: { "x-access-token": localStorage.getItem('token') },
     success: function (data) {
       console.log(data);
-
+      cartItemList();
+      $(".quantityArray").empty();
+      $(".book-cartlist").empty();
     },
     error: function (error) {
       console.error(error);
     }
   });
+}
+var elememt1;
+function fun1(){
+ let getelement="example for let";
+ let array1=["1","2","3","4"]
+ array1=push["5"]
+
 }

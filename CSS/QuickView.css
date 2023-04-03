@@ -224,7 +224,7 @@
     flex-direction: row;
 }
 
-.rating {
+.ratingadd {
     width: 35px;
     height: 17px;
     flex-direction: row;
@@ -454,3 +454,11 @@
     border: 0px solid red;
     font-weight: 600;
 }
+.rating {
+    width: 180px;
+  }
+  
+  .rating__star {
+    cursor: pointer;
+    color: #dabd18b2;
+  }

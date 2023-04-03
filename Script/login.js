@@ -13,7 +13,9 @@ $(function () {
             success: function (data) {
                 console.log(data);
                 localStorage.setItem('token',data.result.accessToken)
-                alert("sigin successfull.");
+                // alert("sigin successfull.");
+                window.location.href="/Templates/Dasboard/dashboard.html"
+
             },
             error: function (error) {
                 console.error(error);
@@ -26,7 +28,4 @@ $(function () {
 });
 function signup(){
     window.location.href="/Templates/signup/signup.html"
-}
-function dashboard(){
-    window.location.href="/Templates/Dasboard/dashboard.html"
 }
